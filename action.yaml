@@ -40,7 +40,7 @@ runs:
       shell: bash
 
     - name: Install updatecli in the runner
-      uses: updatecli/updatecli-action@v2.88.0
+      uses: updatecli/updatecli-action@v2.91.0
 
     - name: Run updatecli in apply mode
       run: |
@@ -61,7 +61,7 @@ runs:
 
     - name: Install `helm-docs`
       if: inputs.run-helm-docs == 'true' && env.CHANGES == 'true'
-      uses: jdx/mise-action@v2
+      uses: jdx/mise-action@v3
       with:
         install_args: helm-docs
 

@@ -15,10 +15,10 @@ jobs:
       contents: read
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install tool dependencies
-        uses: jdx/mise-action@v2
+        uses: jdx/mise-action@v3
 
       - name: Run pre-commit
         run: |

@@ -17,7 +17,7 @@ jobs:
       pull-requests: read
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: updatecli-minor-apply
         uses: prefecthq/actions-updatecli-apply@${{ github.head_ref }}

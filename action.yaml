@@ -69,8 +69,10 @@ runs:
       if: inputs.run-helm-docs == 'true' && env.CHANGES == 'true'
       run: |
         helm-docs --template-files=README.md.gotmpl
-        git commit -am "helm-docs"
-        git push
+        if [[ $(git diff --name-only | wc -l) -gt 0 ]]; then
+          git commit -am "helm-docs"
+          git push
+        fi
       shell: bash
 
     - name: Create PR
